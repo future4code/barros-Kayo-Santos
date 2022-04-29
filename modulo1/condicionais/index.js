@@ -249,84 +249,84 @@ if(tipoJogo === "DO" && etapaJogo === "SF" && categoria === 1){
     tipoJogo = "Nacional"
     etapaJogo = "Final"
 }else if(tipoJogo === "IN" && etapaJogo === "SF" && categoria === 1){
-    valorIngresso = (1320 * 4.10).toFixed(2)
+    valorIngresso = (1320 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Semifinais"
 }else if(tipoJogo === "IN" && etapaJogo === "SF" && categoria === 2){
-    valorIngresso = (880 * 4.10).toFixed(2)
+    valorIngresso = (880 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Semifinais"
 }else if(tipoJogo === "IN" && etapaJogo === "SF" && categoria === 3){
-    valorIngresso = (550 * 4.10).toFixed(2)
+    valorIngresso = (550 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Semifinais"
 }else if(tipoJogo === "IN" && etapaJogo === "SF" && categoria === 4){
-    valorIngresso = (220 * 4.10).toFixed(2)
+    valorIngresso = (220 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Semifinais"
 }else if(tipoJogo === "IN" && etapaJogo === "DT" && categoria === 1){
-    valorIngresso = (660 * 4.10).toFixed(2)
+    valorIngresso = (660 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Decisão do 3º lugar"
 }else if(tipoJogo === "IN" && etapaJogo === "DT" && categoria === 2){
-    valorIngresso = (440 * 4.10).toFixed(2)
+    valorIngresso = (440 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Decisão do 3º lugar"
 }else if(tipoJogo === "IN" && etapaJogo === "DT" && categoria === 3){
-    valorIngresso = (330 * 4.10).toFixed(2)
+    valorIngresso = (330 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Decisão do 3º lugar"
 }else if(tipoJogo === "IN" && etapaJogo === "DT" && categoria === 4){
-    valorIngresso = (170 * 4.10).toFixed(2)
+    valorIngresso = (170 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Decisão do 3º lugar"
 }else if(tipoJogo === "IN" && etapaJogo === "FI" && categoria === 1){
-    valorIngresso = (1980 * 4.10).toFixed(2)
+    valorIngresso = (1980 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Final"
 }else if(tipoJogo === "IN" && etapaJogo === "FI" && categoria === 2){
-    valorIngresso = (1320 * 4.10).toFixed(2)
+    valorIngresso = (1320 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Final"
 }else if(tipoJogo === "IN" && etapaJogo === "FI" && categoria === 3){
-    valorIngresso = (880 * 4.10).toFixed(2)
+    valorIngresso = (880 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
     tipoJogo = "Internacional"
     etapaJogo = "Final"
 }else if(tipoJogo === "IN" && etapaJogo === "FI" && categoria === 4){
-    valorIngresso = (330 * 4.10).toFixed(2)
+    valorIngresso = (330 / 4.10).toFixed(2)
     valorTotal = (valorIngresso * ingresso)
     valorTotal1 = "U$" + valorTotal
     valor = "U$" + valorIngresso
