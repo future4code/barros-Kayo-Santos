@@ -133,3 +133,16 @@ imprime(original)
 
 */
 
+let original = [10,21,30,41,50,61,70]
+
+
+function imprime(arrays) {
+    for(let array of arrays){
+        if(array % 2 === 0){
+            console.log(array);
+        }
+    }
+        
+}    
+
+imprime(original)
