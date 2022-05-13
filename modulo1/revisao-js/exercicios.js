@@ -158,15 +158,48 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+  for(let i = 0; i<contas.length; i++){
+    let armazenandoAsCompras = []; //variável que vai representar a soma das compras
+    calculaSaldo(contas); //chamando a função para poder ativa-la
 
+
+    function calculaSaldo(numero) {
+      numero[i].compras.forEach(nr => armazenandoAsCompras.push(nr * -1));
+      // aqui vamos pegar cada valor das compras e multiplicar por -1 e depois armazenar na variável entradas
+    }
+
+    function somaNumeros(numeros) {
+      return numeros.reduce((sum,nr) => sum + nr, 0); //somando os valores das compras
+      
+    }
+    contas[i].compras = [] //substituindo as compras por array vazio
+    contas[i].saldoTotal += somaNumeros(armazenandoAsCompras) // e calculando a soma do saldo + (- a soma das compras)
+  }
+  
+  return contas
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
   
+  function ordemAlfabetica(a,b) {
+    if(a.nome > b.nome){
+      return 1
+    }else if(a.nome < b.nome){
+      return -1
+    }
+  }
+  return consultas.sort(ordemAlfabetica)
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+
+  for(let i = 0; i < 3; i++){
+    consultas.sort((a,b) => a.dataDaConsulta.split("/")[i] > b.dataDaConsulta.split("/")[i] ? 1 : a.dataDaConsulta.split("/")[i] < b.dataDaConsulta.split("/")[i] ? -1 : 0)
+  } 
+ return consultas
+  
 }
+
+ 
