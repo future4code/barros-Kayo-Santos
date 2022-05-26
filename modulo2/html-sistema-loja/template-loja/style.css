@@ -1,0 +1,125 @@
+.footer{
+    max-width: 30px;
+    background-color:white;
+    padding: 0;
+    
+    
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+}
+
+nav{
+    background-color: #051933;
+    margin: 0;
+    padding: 10px;
+    
+}
+
+.efeito{
+    background-color: #e3e3e3;
+}
+
+#logo{
+    margin-top: 10px;
+    max-width: 100px;
+}
+#gif{
+    width: 60%;
+  margin: auto;
+  display: block;;
+}
+
+h1{
+    display: inline;
+    color: #e3e3e3;
+    
+}
+
+.cabeçalho{
+    font-size: large;
+}
+.index{
+    color: #e3e3e3;
+    padding: 100px;
+}
+header{
+    color: #e3e3e3;
+    background-color: black;
+    margin: 0;
+    
+}
+
+main{
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 27px;
+}
+#main{
+    color: #051933;
+}
+#p-footer{
+    color: #051933;
+    font-weight: bold;
+}
+
+table{
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+#bordas{
+    border: 3px solid #051933;
+    background-color: white;
+    text-align: center;
+}
+
+#bordas td {
+    border: 3px solid #051933;
+    color: #051933;
+    background-color: white;
+    text-align: center;
+    
+}
+body{
+    background-color: black;
+}
+h2{
+    color: #051933;
+    text-align: center;
+}
+form{
+    color: #051933;
+    font-size: bold;
+    width: 200px; 
+    margin-left: 660px;
+    margin-right: 0px;
+    text-align: justify;
+    border: 3px solid #051933;
+    
+
+}
+
+ul{
+    color: #051933;
+    text-align: justify;
+    margin-left: 550px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#funcionarios{
+    width: 400px; 
+    margin-left: 550px;
+    margin-right: auto;
+    border: 5px solid #051933;
+}
+
+.input{
+    display: inline-block;
+    width: 300px;
+}
