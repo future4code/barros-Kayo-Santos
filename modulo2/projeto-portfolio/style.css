@@ -23,7 +23,7 @@ body{
 }
 
 .cabecalho-imagem{
-    height: 50px;
+    height: 70px;
     border-radius: 20px;
     
 }
@@ -40,9 +40,13 @@ body{
     font-size: 18px;
 }
 
+.cabecalho-menu-item:hover{
+    color: #C22323
+}
+
 .conteudo{
     border-top: 0.4px solid #FFF2E7;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .conteudo-principal{
@@ -63,19 +67,20 @@ body{
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 64px;
-    color: #FFF2E7
+    color: #FFF2E7;
+    margin-top: 50px;
 }
 
 .conteudo-principal-escrito-subtitulo{
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color:#ECD6C4;
+    color:#FFF2E7;
 
 }
 
 .conteudo-principal-escrito-botao{
-    background-color: #ECD6C4;
+    background-color: #FFF2E7;
     width: 180px;
     height: 60px;
     border: none;
@@ -84,16 +89,19 @@ body{
     font-family: 'Sarala', sans-serif;
     font-size: 24px;
     font-weight: 400;
-    color: #2F2325;  
+    color: #1d1d1d;
+    transition: all 0.5s;
+    cursor: pointer; 
 }
 
 .conteudo-principal-escrito-botao:hover{
-    background-color: rgba(236, 214, 196, 0.53);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .conteudo-principal-imagem{
     height: 200px;
-    border-radius: 20%;
+    border-radius: 50%;
     border-top: 0.4px solid #1d1d1d;
 
 }
@@ -104,7 +112,7 @@ body{
     align-items: center;
     gap: 10px;
     margin-top: 48px;
-    border-top: 0.4px solid #FFF2EF;
+    border-top: 0.4px solid #FFF2E7;
 
 }
 
@@ -120,15 +128,25 @@ body{
 
 .conteudo-secundario-paragrafo{
     font-family: 'Sarala', sans-serif;
-    font-size: 18px;
+    color: #FFF2E7;
     font-weight: 300;
-    color: #ECD6C4;
-    text-align: center;
+    font-size: 21px;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    text-align: justify;
+    margin-top: 5px;
+    padding-left: 300px;
+    padding-right: 100px;
+    gap: 5px;
 }
 
 .rodape{
-    padding: 32px;
-    border-top: 0.4px solid #FFF2EF;
+    padding: 20px;
+    border-top: 0.4px solid #FFF2E7;
 }
 
 .rodape-imagem{
