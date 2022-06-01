@@ -34,6 +34,7 @@
 
 .container{
     display: flex;
+    
 }
 
 
@@ -52,31 +53,14 @@
 
 
 
-a{
-    color: black;
-       
-}
-
-
-.span-1{
-    padding-left: 85px;
-}
-.span-2{
-    padding-left: 80px;
-}
-span{
-    padding-left: 50px;
-}
-
-
-
-
 .menu-imagem{
-    height: 25px;
+    height: 22px;
+    padding-right: 10px;
 }
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 section{
@@ -97,7 +81,11 @@ main{
     height: 150px;
 }
 
-
+.espaco{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .rodape{
     background-color: mediumvioletred;
