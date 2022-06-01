@@ -1,0 +1,95 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: mediumvioletred;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.cabecalho-principal{
+    display: flex;
+    flex-direction: row ;
+    gap: 10px
+    
+}
+
+.cabecalho-imagem{
+    height: 25px;
+}
+
+.cabecalho-botao{
+   width: 60px;
+}
+
+
+
+.container{
+    display: flex;
+    
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;    
+    background-color: #f2d0e0;
+    width: 250px;
+    padding-left: 10px;
+    padding-top: 10px;
+    gap: 15px;
+    color: black;
+    text-align: justify;
+    
+}
+
+
+
+.menu-imagem{
+    height: 22px;
+    padding-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+section{
+    box-shadow: 9px 7px 5px darkgrey;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.cards{
+    height: 150px;
+}
+
+.espaco{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape{
+    background-color: mediumvioletred;
+   text-align: center;
+   
+}
+
