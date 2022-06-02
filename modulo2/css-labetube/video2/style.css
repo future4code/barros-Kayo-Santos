@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background-color: #ef843a;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.principal{
+    padding-bottom: 90px;
+    position: relative;
+    left: 50px;
+    
+    
+}
+
+.titulo{
+    padding: 25px;
+    font-weight: bold;
+    position: relative;
+    right: 10px;
+}
+
+
+
+.rodape{
+    color: #ffff;
+    background-color: #323b3e;
+    padding: 15px;
+}

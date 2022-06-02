@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background-color: #ef843a;
+    padding: 20px;
+    font-weight: bold;
+    
+}
+
+.busca{
+    width: 90px;
+    position: relative;
+    left: 30px;    
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    font-weight: bold;
+    padding-bottom: 80px;
+}
+
+.imagem{
+    border: 1px solid #389c38;
+    width: 400px;
+}
+
+.imagem-{
+    width: 400px;
+}
+
+.paragrafo{
+    padding: 15px 5px;
+}
+
+.rodape{
+    color: #ffff;
+    background-color: #323b3e;
+    padding: 15px;
+}
