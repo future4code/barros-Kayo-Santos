@@ -15,8 +15,14 @@ function Post(props){
   const [curtido, setCurtido] = useState(false)
   const [comentando, setComentando] = useState(false)
   const [numeroComentarios, setNumeroComentarios] = useState(0)
+  const [respostaUsuario, setRespostaUsuario] = useState("")
   
-
+  const handleRespostaUsuario = (event) => {
+    setRespostaUsuario(event.target.value)
+    console.log(respostaUsuario);
+    }
+  
+     
   const onClickCurtida = () => {
     setCurtido(!curtido);
 
@@ -32,7 +38,7 @@ function Post(props){
   const onClickComentario = () => {
     setComentando(!comentando)
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} comentario={respostaUsuario} onChangeComentario={handleRespostaUsuario}/>
       
     }
     
@@ -41,6 +47,7 @@ function Post(props){
   const aoEnviarComentario = () => {
     setComentando(false)
     setNumeroComentarios(numeroComentarios + 1)
+    
   }
 
   let iconeCurtida
@@ -54,7 +61,7 @@ function Post(props){
     let componenteComentario
 
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} onChangeComentario={handleRespostaUsuario}/>
     }
 
   return(

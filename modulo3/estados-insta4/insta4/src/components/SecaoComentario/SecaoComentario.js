@@ -11,7 +11,7 @@ export function SecaoComentario(props) {
 		<div className='CommentContainer'>
 			<input className='InputComentario'
 				placeholder={'Comentário'}
-				
+				value={props.comentario}				
 				onChange={props.onChangeComentario}
 				
 			/>
