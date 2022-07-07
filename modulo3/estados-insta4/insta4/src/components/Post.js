@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
-import './style.css'
+import{PostHeader,PostFooter,PostContainer,Lista,ImagemPost} from "../style"
 
-import {IconeComContador} from '../IconeComContador/IconeComContador'
-import iconeCoracaoBranco from '../../img/favorite-white.svg'
-import iconeCoracaoPreto from '../../img/favorite.svg'
-import iconeComentario from '../../img/comment_icon.svg'
-import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+
+
+import {IconeComContador} from './IconeComContador'
+import iconeCoracaoBranco from '../img/favorite-white.svg'
+import iconeCoracaoPreto from '../img/favorite.svg'
+import iconeComentario from '../img/comment_icon.svg'
+import {SecaoComentario} from './SecaoComentario'
 
 
 
@@ -57,16 +59,29 @@ function Post(props){
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
     }
 
+  const arrayPost = [props.lista];
+
+  const arrayLista = arrayPost.map((item,index) => {
+    return (
+      <Lista key={index}>
+      <PostHeader>
+        <img className = 'UserPhoto' src={item.fotoUsuario} alt={'Imagem do usuario'}/>
+        <p>{item.nomeUsuario}</p>
+      </PostHeader>
+      <ImagemPost src={item.fotoPost} alt={'Imagem do post'}/>
+      </Lista>
+    );
+    
+  });
+  
+  
+
+
   return(
-    <div className = 'PostContainer'>
-      <div className = 'PostHeader'>
-        <img className = 'UserPhoto' src={props.fotoUsuario} alt={'Imagem do usuario'}/>
-        <p>{props.nomeUsuario}</p>
-      </div>
+    <PostContainer>
+      {arrayLista}
 
-      <img className = 'PostPhoto'src={props.fotoPost} alt={'Imagem do post'}/>
-
-      <div className = 'PostFooter'>
+      <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
@@ -78,9 +93,9 @@ function Post(props){
           onClickIcone={onClickComentario}
           valorContador={numeroComentarios}
         />
-      </div>
+      </PostFooter>
       {componenteComentario}
-    </div>
+      </PostContainer>
   )
 }
 
