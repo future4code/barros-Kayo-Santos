@@ -23,6 +23,7 @@ function App() {
         </PostHeader>
         <ImagemPost src={item.fotoPost} alt={'Imagem do post'}/>
         </Lista>
+        <Post/>
         </PostContainer>            
     )
   })

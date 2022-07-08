@@ -80,9 +80,6 @@ function Post(props){
 
 
   return(
-    <PostContainer>
-      {/* {arrayLista} */}
-
       <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
@@ -95,9 +92,10 @@ function Post(props){
           onClickIcone={onClickComentario}
           valorContador={numeroComentarios}
         />
+        {componenteComentario}
       </PostFooter>
-      {componenteComentario}
-      </PostContainer>
+      
+      
   )
 }
 
