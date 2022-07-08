@@ -1,43 +1,81 @@
-import React from 'react';
+import React from 'react'
+import { useState } from 'react'
 import Post from './components/Post';
-import{MainContainer} from "./style"
+
+import{MainContainer,Lista,PostHeader,ImagemPost,PostContainer} from "./style"
+
 
 
 function App() {
+  
+  const [itens,setItens]=useState([
+    {nomeUsuario:'paulinha', fotoUsuario: 'https://picsum.photos/id/721/50/50', fotoPost:'https://picsum.photos/id/201/150'},
+    {nomeUsuario:'fabi', fotoUsuario: 'https://picsum.photos/id/722/50/51', fotoPost:'https://picsum.photos/id/202/150'},
+    {nomeUsuario:'kayn', fotoUsuario: 'https://picsum.photos/id/723/50/52', fotoPost:'https://picsum.photos/id/203/150'}
+  ])
+
+  const itensPostagem=itens.map((item,index)=>{
+    return(
+      <PostContainer><Lista key={index}>
+        <PostHeader>
+          <img className = 'UserPhoto' src={item.fotoUsuario} alt={'Imagem do usuario'}/>
+          <p>{item.nomeUsuario}</p>
+        </PostHeader>
+        <ImagemPost src={item.fotoPost} alt={'Imagem do post'}/>
+        </Lista>
+        </PostContainer>            
+    )
+  })
+
+  const [inputName, setInputName]=useState("")
+  const [inputFotoUsuario, setInputFotoUsuario]=useState("")
+  const [inputPostagem, setInputPostagem]=useState("")
+  
+  const mudaNome=(e)=>{
+    setInputName(e.target.value);
+    console.log(inputName);
+  }
+  
+  const mudaFotoUsuario=(e)=>{
+    setInputFotoUsuario(e.target.value)
+    console.log(inputFotoUsuario);
+  }
+  
+  const mudaPostagem=(e)=>{
+    setInputPostagem(e.target.value)
+    console.log(inputPostagem);
+  }
+  
+  const adicionar=(e)=>{
+    e.preventDefault() 
+    const itensAtualizados=[...itens,{nomeUsuario:inputName,fotoUsuario:'https://picsum.photos/id/722/50/51', fotoPost:'https://picsum.photos/id/202/150'}]
+    setItens(itensAtualizados)  
+    setInputName("")
+    setInputFotoUsuario("")
+    setInputPostagem("")
+  }
+  
+
 return(
   <MainContainer>
-           <Post
-            lista={{
-              nomeUsuario:'paulinha',
-              fotoUsuario: 'https://i.picsum.photos/id/721/50/50.jpg?hmac=VdKBp1FKmV3fOFChDYrEK3xSQFuoxmvzTp7BETlaoG0',
-              fotoPost:'https://i.picsum.photos/id/444/200/150.jpg?hmac=e5vGz_0patbt_3MyffqAiTq2Sp5hii5HLLd2K9p-DVQ',
-            }}          
+
+            <form>
+                <input type='text' required placeholder='Nome' value={inputName} onChange={mudaNome}/>
+                <input type='text'required placeholder='Foto do Perfil' value={inputFotoUsuario} onChange={mudaFotoUsuario}/>
+                <input type='text'required placeholder='Postagem' value={inputPostagem} onChange={mudaPostagem}/>
+                <button onClick={adicionar}>Adicionar</button>
+            </form>
+           
+            {itensPostagem}    
                      
-            />
-
-            <Post
-            lista={{
-            nomeUsuario:'Kayn',
-            fotoUsuario:'https://i.picsum.photos/id/473/50/50.jpg?hmac=1gFxVYXfDGti34xJhxJE7ZGZcQQKT6ke1InUsnWBFyE',
-            fotoPost:'https://i.picsum.photos/id/237/200/150.jpg?hmac=cP3GW-TQQWpntUpoHauvAWmCaKSFUngooZCPRN50Om8',
-          }}
-            />
-
-            <Post
-            lista={{
-            nomeUsuario:'Fabi',
-            fotoUsuario:'https://i.picsum.photos/id/583/50/50.jpg?hmac=7scYdOqdHj12DfBFgxFDv7M8ITrBbN7DafGRxJE7XcI',
-            fotoPost:'https://i.picsum.photos/id/220/200/150.jpg?hmac=ir64HWOUcVwaEo5M9cvbfO2uy_4GoBJvKbWdv7Sn4Eo',
-          }}
-            />
+                     
 
 </MainContainer>
 
   
 
-)
+);
 
 }
-
 
 export default App;

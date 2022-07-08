@@ -59,27 +59,29 @@ function Post(props){
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
     }
 
-  const arrayPost = [props.lista];
+  
+  
+  //   const arrayPost = [props.lista];
 
-  const arrayLista = arrayPost.map((item,index) => {
-    return (
-      <Lista key={index}>
-      <PostHeader>
-        <img className = 'UserPhoto' src={item.fotoUsuario} alt={'Imagem do usuario'}/>
-        <p>{item.nomeUsuario}</p>
-      </PostHeader>
-      <ImagemPost src={item.fotoPost} alt={'Imagem do post'}/>
-      </Lista>
-    );
+  // const arrayLista = arrayPost.map((item,index) => {
+  //   return (
+  //     <Lista key={index}>
+  //     <PostHeader>
+  //       <img className = 'UserPhoto' src={item.fotoUsuario} alt={'Imagem do usuario'}/>
+  //       <p>{item.nomeUsuario}</p>
+  //     </PostHeader>
+  //     <ImagemPost src={item.fotoPost} alt={'Imagem do post'}/>
+  //     </Lista>
+  //   );
     
-  });
+  // });
   
   
 
 
   return(
     <PostContainer>
-      {arrayLista}
+      {/* {arrayLista} */}
 
       <PostFooter>
         <IconeComContador
