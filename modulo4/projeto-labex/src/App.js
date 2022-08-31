@@ -1,15 +1,14 @@
-import Rotas from "./Routers/Rotas";
-import './App.css';
-import { TripsPage } from "./Pages/TripsPage";
-import CardTrip from "./components/CardTrip";
-
+import React from "react";
+import Router from './pages/Router';
+import { GlobalStyle } from "./style";
 
 
 function App() {
   return (
-    <div className="App">
-      <Rotas/>
-    </div>
+    <>
+    <GlobalStyle/>
+    <Router/> 
+    </>   
   );
 }
 
