@@ -1,6 +1,6 @@
 //a) entrada: array de números, saída: ordena os números  e faz a média deles.
 
-function obterEstatisticas(numeros:number[]):any {
+function obterEstatisticas(numeros:number[]): estatisticas{
 
     const numerosOrdenados = numeros.sort(
         (a:number, b:number) => a - b
@@ -26,6 +26,12 @@ console.log(obterEstatisticas([6,3]));
 //b) number e o retorno é type any
 
 //c)
+type estatisticas = {
+    maior:number,
+    menor: number,
+    media: number
+}
+
 type amostraDeDados = {
     numeros: number[],
-    obterEstatisticas: (numeros:number[]) => {estatísticas:string}}
+    obterEstatisticas: (numeros:number[]) => {estatísticas:estatisticas}}
