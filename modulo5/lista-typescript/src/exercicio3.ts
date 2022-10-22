@@ -32,7 +32,7 @@ enum GENERO {
       genero: genero
     };
   
-    if (typeof pontuacao !== "undefined") {
+    if (typeof pontuacao === "number") {
       return dadosFilme;
     } else {
       return dadosFilme2;

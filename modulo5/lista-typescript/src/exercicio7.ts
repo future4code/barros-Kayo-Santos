@@ -34,7 +34,7 @@ type Estoque = {
       };
     });
   
-    function ordenar(a: Estoque2, b: Estoque2) {
+    function ordenando(a: Estoque2, b: Estoque2) {
       if (a.quantidade < b.quantidade) {
         return -1;
       } else if (a.quantidade > b.quantidade) {
@@ -44,7 +44,7 @@ type Estoque = {
       }
     }
   
-    return novoValor.sort(ordenar);
+    return novoValor.sort(ordenando);
   }
   
   console.table(estoqueAtualizado(estoque));
