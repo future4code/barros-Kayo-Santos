@@ -48,7 +48,7 @@ app.get('/users/type', (req: Request, res: Response) => {
     }
 })
 
-//exercício 2
+//exercício 3
 //a) passei os parâmetros por query, como é uma busca, acredito que seja a melhor forma.
 
 app.get('/users/name', (req: Request, res: Response) => {
