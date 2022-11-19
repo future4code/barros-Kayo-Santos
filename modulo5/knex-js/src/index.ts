@@ -74,7 +74,7 @@ app.patch('/actor/salary/:id', async(req:Request, res:Response):Promise<void> =>
 
 //b)
 
-app.delete('/actor', async(req:Request, res:Response):Promise<void> => {
+app.delete('/actor/:id', async(req:Request, res:Response):Promise<void> => {
     const id = req.params.id;
     
     try{
@@ -102,7 +102,7 @@ app.delete('/actor', async(req:Request, res:Response):Promise<void> => {
 
 //c)
 app.get('/actor/avg', async(req:Request, res:Response):Promise<void> => {
-    const gender = req.params.gender
+    const gender = req.query.gender
     let result  
 
     try{
@@ -142,14 +142,14 @@ app.get("/actor/:id", async (req: Request, res: Response): Promise<void> => {
 })
 
 //b)
-app.get("/actor", async (req: Request, res: Response): Promise<void> => {
+app.get("/actor/count", async (req: Request, res: Response): Promise<void> => {
     const gender = req.query.gender as string
     let result
 
     try {
         
         result = await connection("Actor")
-        .count("*")
+        .count('*')
         .where( 
             {
                 gender: gender
