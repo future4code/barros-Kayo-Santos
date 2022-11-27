@@ -5,12 +5,16 @@
       "migrations": "tsnd ./src/data/migrations.ts"
    },
    "dependencies": {
+      "-": "^0.0.1",
+      "@types/nodemailer": "^6.4.6",
       "axios": "^1.2.0",
       "cors": "^2.8.5",
+      "D": "^1.0.0",
       "dotenv": "^8.6.0",
       "express": "^4.17.1",
       "knex": "^0.21.5",
       "mysql": "^2.18.1",
+      "nodemailer": "^6.8.0",
       "typescript": "^4.9.3"
    },
    "devDependencies": {
