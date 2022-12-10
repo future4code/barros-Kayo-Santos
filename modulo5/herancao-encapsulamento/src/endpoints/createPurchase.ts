@@ -1,9 +1,9 @@
 import { Request, Response } from "express"
-import { Purchase } from "../class/Purchase"
 import connection from "../database/connection"
+import { PurchaseDatabase } from "../database/PurchaseDatabase"
 import { TABLE_PRODUCTS, TABLE_PURCHASES, TABLE_USERS } from "../database/tableNames"
-import { Product_data } from "../models/Product"
-import { Purchase_data } from "../models/Purchase"
+import { Product } from "../models/Product"
+import { Purchase } from "../models/Purchase"
 
 export const createPurchase = async (req: Request, res: Response) => {
     let errorCode = 400
@@ -34,21 +34,28 @@ export const createPurchase = async (req: Request, res: Response) => {
             throw new Error("Produto não encontrado.")
         }
         
-        const product: Product_data = {
-            id: findProduct[0].id,
-            name: findProduct[0].name,
-            price: findProduct[0].price
-        }
-
-        const   totalPrice = product.price * quantity
         
+        const product = new Product(
+            findProduct[0].id,
+            findProduct[0].name,
+            findProduct[0].price
+        )
 
-        const newPurchase = new Purchase(Date.now().toString(),userId, productId, quantity, totalPrice)
+        
+        const purchase = new Purchase(
+            Date.now().toString(),
+            userId,
+            productId,
+            quantity,
+            product.getPrice() * quantity
+        )
+
+        const PurchaseDB = new PurchaseDatabase();
+
+        PurchaseDB.createPurchase(purchase.getId(), purchase.getUserId(), purchase.getProductId(), purchase.getQuantity(), purchase.getTotalPrice())
         
         
-        await connection(TABLE_PURCHASES).insert(newPurchase)
-
-        res.status(201).send({ message: "Compra registrada", purchase: newPurchase })
+        res.status(201).send({ message: "Compra registrada", purchase: purchase })
     } catch (error) {
         res.status(errorCode).send({ message: error.message })
     }
