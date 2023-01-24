@@ -1,0 +1,14 @@
+### Create
+POST http://localhost:3003/createUser
+Content-Type: application/json
+
+{
+	"name": "Michael Scot",
+	"email": "michael2@dundermifflin.com",
+	"password": "theboss"	
+}
+
+
+
+
+
