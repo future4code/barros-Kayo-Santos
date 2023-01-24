@@ -1,0 +1,30 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "kayo",
+    "email": "kayo@ceshar.com",
+    "password": "23432535"
+}
+
+### Get all Users
+
+GET http://localhost:3003/user/users
+
+### Create a new movie
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title": "Harry Potter e a Câmara Secreta",
+    "description": "Após as sofríveis férias na casa dos tios, Harry Potter se prepara para voltar a Hogwarts e começar seu segundo ano na escola de bruxos.",
+    "duration_in_minutes": "164",
+    "year_of_release": "2002"
+}
+
+### Get all Movies
+
+GET http://localhost:3003/movie/movies
+
+
